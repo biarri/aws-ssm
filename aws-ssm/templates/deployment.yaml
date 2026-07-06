@@ -39,6 +39,9 @@ spec:
       containers:
         - name: {{ .Chart.Name }}
           image: {{ .Values.image.name }}:{{ .Values.image.tag }}
+          args:
+            - "-interval"
+            - {{ .Values.interval | quote }}
           ports:
             - name: http
               containerPort: {{ .Values.metrics_port }}

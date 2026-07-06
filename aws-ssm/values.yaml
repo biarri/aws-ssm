@@ -32,6 +32,9 @@ master_url: ""
 # Healthcheck port
 metrics_port: 9999
 
+# Polling interval in seconds (-interval flag; binary default 30)
+interval: 30
+
 # Pod Annotations
 podAnnotations: {}
 
